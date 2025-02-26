@@ -14,13 +14,13 @@ const Sandbox = () => {
 	// Add constants for screen wrapping
 	const [config, setConfig] = useState({
 		maxBalls: 100,
-		initialBalls: 10,
+		initialBalls: 20,
 		maxSpawnPerCollision: 5,
 		minBallSize: 1,
 		maxBallSize: 50,
 		minVelocity: -7,
 		maxVelocity: 7,
-		velocity: 0.05, // To slow down movement
+		velocity: 0.15, // To slow down movement
 		trailOpacity: 0.1, // Background opacity for trails
 		pauseSimulation: false
 	});
