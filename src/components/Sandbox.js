@@ -20,8 +20,8 @@ const Sandbox = () => {
 		maxBallSize: 50,
 		minVelocity: -7,
 		maxVelocity: 7,
-		velocityScale: 0.5, // To slow down movement
-		trailOpacity: 0.25, // Background opacity for trails
+		velocityScale: 0.05, // To slow down movement
+		trailOpacity: 0.1, // Background opacity for trails
 		pauseSimulation: false
 	});
 
@@ -220,6 +220,7 @@ const Sandbox = () => {
 			cancelAnimationFrame(sim.animationId);
 		}
 		};
+    // eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []); // Empty deps array means this runs once on mount
 
 	// Make configuration available in the simulation context
