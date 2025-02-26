@@ -20,7 +20,7 @@ const Sandbox = () => {
 		maxBallSize: 50,
 		minVelocity: -7,
 		maxVelocity: 7,
-		velocityScale: 0.05, // To slow down movement
+		velocity: 0.05, // To slow down movement
 		trailOpacity: 0.1, // Background opacity for trails
 		pauseSimulation: false
 	});
@@ -55,8 +55,8 @@ const Sandbox = () => {
 			this.x = x;
 			this.y = y;
 			// Apply velocity scale factor from current config
-			this.velX = velX * config.velocityScale;
-			this.velY = velY * config.velocityScale;
+			this.velX = velX * config.velocity;
+			this.velY = velY * config.velocity;
 			this.color = color;
 			this.size = size;
 			// Store original velocity values to allow rescaling
@@ -76,8 +76,8 @@ const Sandbox = () => {
 			const currentConfig = sim.currentConfig || config;
 			
 			// Recalculate velocity with current scale
-			this.velX = this.origVelX * currentConfig.velocityScale;
-			this.velY = this.origVelY * currentConfig.velocityScale;
+			this.velX = this.origVelX * currentConfig.velocity;
+			this.velY = this.origVelY * currentConfig.velocity;
 			
 			// Move the ball
 			this.x += this.velX;
@@ -235,7 +235,7 @@ const Sandbox = () => {
 		if (sim.balls) {
 			sim.balls.forEach(ball => {
 			// Velocity will be recalculated in the next update cycle
-			ball.velocityScaleChanged = true;
+			ball.velocityChanged = true;
 			});
 		}
 		}
@@ -511,15 +511,15 @@ const Sandbox = () => {
 			
 			<div className="control-group">
 				<label className="control-label">
-				Velocity Scale: {config.velocityScale.toFixed(2)}
+				Velocity: {config.velocity.toFixed(2)}
 				<input
 					type="range"
-					name="velocityScale"
+					name="velocity"
 					min="0.01"
 					max="2"
 					step="0.01"
 					className="control-input"
-					value={config.velocityScale}
+					value={config.velocity}
 					onChange={handleConfigChange}
 				/>
 				<small className="control-hint">Lower values = slower movement</small>
