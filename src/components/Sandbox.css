@@ -1,13 +1,14 @@
-.sandbox-container {
+.controls-panel {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
-  background: #000519;
-  margin: 0;
-  padding: 0;
+  top: 120px; /* Increased to accommodate the header */
+  right: 16px;
+  background-color: rgba(17, 24, 39, 0.8);
+  padding: 16px;
+  border-radius: 4px;
+  color: white;
+  width: 256px;
+  max-height: calc(100vh - 150px); /* Ensure it doesn't extend beyond viewport */
+  overflow-y: auto; /* Add scrolling if needed */
 }
 
 .sandbox-canvas {
