@@ -1,12 +1,15 @@
 {
-  "homepage": "http://jsilvas.github.io/Stellarium",
+  "homepage": "https://jsilvas.github.io/Stellarium/",
   "name": "stellarium",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "^5.0.1",
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1",
+    "webpack-dev-server": "^5.2.0"
   },
   "scripts": {
     "predeploy": "npm run build",

@@ -4,15 +4,6 @@ import './Header.css';
 
 
 class Header extends React.Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.canvasRef = React.createRef();
-  // }
-
-  // componentDidMount() {
-
-  // }
-    
   render() {
     return (
       <div className="Header">
