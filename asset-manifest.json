@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/Stellarium/static/css/main.feade821.css",
+    "main.js": "/Stellarium/static/js/main.b6432c45.js",
+    "static/media/logo.svg": "/Stellarium/static/media/logo.927f1d60d9299096a4a8068289cc4d4b.svg",
+    "index.html": "/Stellarium/index.html",
+    "main.feade821.css.map": "/Stellarium/static/css/main.feade821.css.map",
+    "main.b6432c45.js.map": "/Stellarium/static/js/main.b6432c45.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.feade821.css",
+    "static/js/main.b6432c45.js"
+  ]
+}
