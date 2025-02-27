@@ -20,8 +20,8 @@ const Sandbox = () => {
 		maxBallSize: 50,
 		minVelocity: -7,
 		maxVelocity: 7,
-		velocity: 0.15, // To slow down movement
-		trailOpacity: 0.1, // Background opacity for trails
+		velocity: 0.30, // To slow down movement
+		trailOpacity: 0.30, // Background opacity for trails
 		pauseSimulation: false
 	});
 
