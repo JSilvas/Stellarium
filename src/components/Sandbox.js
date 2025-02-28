@@ -528,7 +528,7 @@ const Sandbox = () => {
 			
 			<div className="control-group">
 				<label className="control-label">
-				Trail Length: {config.trailOpacity.toFixed(2)}
+				Trail Opacity: {config.trailOpacity.toFixed(2)}
 				<input
 					type="range"
 					name="trailOpacity"
