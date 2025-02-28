@@ -63,58 +63,55 @@
 
 .range-slider {
   position: relative;
-  height: 40px;
-  width: 100%;
+  height: 40px;  /* Increased height for better usability */
   margin: 10px 0;
 }
 
 .range-track {
   position: absolute;
-  top: 50%;
   width: 100%;
   height: 4px;
-  background-color: #4B5563;
+  background: #444;
+  top: 50%;
   transform: translateY(-50%);
   border-radius: 2px;
 }
 
 .range-fill {
   position: absolute;
-  top: 50%;
   height: 4px;
-  background-color: #3B82F6;
+  background: #666;
+  top: 50%;
   transform: translateY(-50%);
   border-radius: 2px;
 }
 
-.range-handle {
+.range-input {
   position: absolute;
+  width: 100%;
   top: 50%;
-  transform: translate(-50%, -50%);
-  width: 18px;
-  height: 18px;
-  background-color: white;
-  border: 2px solid #3B82F6;
-  border-radius: 50%;
-  cursor: grab;
-  touch-action: none;
-  z-index: 10;
+  transform: translateY(-50%);
+  pointer-events: auto;  /* Make sure inputs are clickable */
+  appearance: none;
+  background: transparent;
+  z-index: 2;
 }
 
-.range-labels {
-  position: absolute;
-  top: 20px;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  font-size: 10px;
-  color: #9CA3AF;
+.range-input::-webkit-slider-thumb {
+  pointer-events: auto;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
 }
 
 .control-hint {
-  color: #A1A1AA;
-  font-size: 12px;
+  display: block;
+  font-size: 0.8em;
+  color: #888;
+  margin-top: 4px;
 }
 
 .checkbox-label {
@@ -147,4 +144,23 @@
 
 .stats-title {
   font-weight: bold;
+}
+
+.audio-status {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.status-indicator {
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: #333;
+    color: #666;
+    font-size: 0.8em;
+}
+
+.status-indicator.active {
+    background: #1a5f7a;
+    color: #fff;
 }
