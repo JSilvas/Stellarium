@@ -539,7 +539,7 @@ const Sandbox = () => {
 					value={config.trailOpacity}
 					onChange={handleConfigChange}
 				/>
-				<small className="control-hint">Low = short trails, High = long trails</small>
+				<small className="control-hint">Low = long trails, High = short trails</small>
 				</label>
 			</div>
 			
