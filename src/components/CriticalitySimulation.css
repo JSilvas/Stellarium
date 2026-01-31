@@ -1,0 +1,256 @@
+.criticality-simulation {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #050f1e;
+}
+
+#criticality-canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: #050f1e;
+  touch-action: none;
+}
+
+/* Control toggle button */
+.toggle-controls-btn {
+  position: fixed;
+  top: 12vh;
+  right: 20px;
+  z-index: 200;
+  padding: 0.75rem 1.5rem;
+  background: rgba(9, 211, 172, 0.2);
+  border: 2px solid rgba(9, 211, 172, 0.5);
+  border-radius: 8px;
+  color: #09d3ac;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.toggle-controls-btn:hover {
+  background: rgba(9, 211, 172, 0.3);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(9, 211, 172, 0.3);
+}
+
+/* Control panel */
+.control-panel {
+  position: fixed;
+  top: 17vh;
+  right: 20px;
+  width: 320px;
+  max-height: 80vh;
+  overflow-y: auto;
+  z-index: 150;
+  background: rgba(10, 20, 40, 0.92);
+  border: 2px solid rgba(9, 211, 172, 0.3);
+  border-radius: 12px;
+  padding: 1.5rem;
+  color: white;
+  font-size: 0.9rem;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+}
+
+.control-panel h3 {
+  margin: 0 0 1rem 0;
+  font-size: 1.2rem;
+  color: #09d3ac;
+  text-align: center;
+  border-bottom: 2px solid rgba(9, 211, 172, 0.3);
+  padding-bottom: 0.5rem;
+}
+
+.control-panel h4 {
+  margin: 1rem 0 0.5rem 0;
+  font-size: 0.95rem;
+  color: #09d3ac;
+  font-weight: 600;
+}
+
+.control-section {
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.control-section:last-of-type {
+  border-bottom: none;
+}
+
+.control-panel label {
+  display: block;
+  margin-bottom: 0.75rem;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 0.85rem;
+}
+
+.control-panel input[type="range"] {
+  width: 100%;
+  margin-top: 0.25rem;
+  accent-color: #09d3ac;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-label input[type="checkbox"] {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  accent-color: #09d3ac;
+}
+
+.control-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
+.control-actions button {
+  flex: 1;
+  padding: 0.75rem;
+  background: rgba(9, 211, 172, 0.2);
+  border: 2px solid rgba(9, 211, 172, 0.5);
+  border-radius: 6px;
+  color: #09d3ac;
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.control-actions button:hover {
+  background: rgba(9, 211, 172, 0.3);
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(9, 211, 172, 0.3);
+}
+
+.control-actions button:active {
+  transform: translateY(0);
+}
+
+/* Statistics panel */
+.stats-panel {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 1rem 0;
+}
+
+.stats-panel h4 {
+  margin: 0 0 0.75rem 0;
+  color: #09d3ac;
+  font-size: 1rem;
+}
+
+.stat {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.stat:last-child {
+  border-bottom: none;
+}
+
+/* Keyboard shortcuts */
+.keyboard-shortcuts {
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  text-align: center;
+}
+
+.keyboard-shortcuts small {
+  display: block;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.75rem;
+  line-height: 1.6;
+  margin-bottom: 0.25rem;
+}
+
+.keyboard-shortcuts small:last-child {
+  margin-bottom: 0;
+}
+
+.keyboard-shortcuts strong {
+  color: #09d3ac;
+}
+
+/* Scrollbar styling for control panel */
+.control-panel::-webkit-scrollbar {
+  width: 8px;
+}
+
+.control-panel::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+}
+
+.control-panel::-webkit-scrollbar-thumb {
+  background: rgba(9, 211, 172, 0.3);
+  border-radius: 4px;
+}
+
+.control-panel::-webkit-scrollbar-thumb:hover {
+  background: rgba(9, 211, 172, 0.5);
+}
+
+/* Mobile responsive */
+@media only screen and (max-width: 768px) {
+  .control-panel {
+    width: 90%;
+    max-width: 350px;
+    right: 5%;
+    top: 15vh;
+    max-height: 70vh;
+    font-size: 0.85rem;
+  }
+
+  .toggle-controls-btn {
+    top: 11vh;
+    right: 5%;
+    padding: 0.6rem 1.2rem;
+    font-size: 0.85rem;
+  }
+
+  .control-panel h3 {
+    font-size: 1.1rem;
+  }
+
+  .control-actions {
+    flex-direction: column;
+  }
+
+  .control-actions button {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .control-panel {
+    width: 92%;
+    right: 4%;
+    padding: 1rem;
+  }
+
+  .toggle-controls-btn {
+    right: 4%;
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+}
