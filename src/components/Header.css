@@ -3,6 +3,7 @@
   left: 0;
   right: 0;
   margin: auto;
+  z-index: 100;
 
   text-align: center;
   background-color: #ff00513d;
@@ -18,6 +19,44 @@
   overflow: hidden;
   height: inherit;
   width: inherit;
+}
+
+.nav-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.nav-button {
+  padding: 0.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.nav-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.nav-button.active {
+  background: rgba(9, 211, 172, 0.3);
+  border-color: #09d3ac;
+  color: #09d3ac;
+  box-shadow: 0 0 15px rgba(9, 211, 172, 0.4);
+}
+
+.header-description {
+  margin: 0.5rem 0;
 }
 
 .App-logo {
