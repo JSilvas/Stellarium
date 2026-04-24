@@ -22,5 +22,6 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Ignore npm lock file — project uses yarn
+# Non-bun lock files
 package-lock.json
+yarn.lock
